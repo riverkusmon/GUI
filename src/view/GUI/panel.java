@@ -30,6 +30,7 @@ public class panel extends JPanel
 	
 	private void setupPanel()
 	{
+		this.setBackground(Color.BLUE);
 		this.add(textLabel);
 		this.add(colorButton);
 	}
@@ -46,10 +47,22 @@ public class panel extends JPanel
 			{
 				public void actionPerformed(ActionEvent mouseClick)
 				{
-					System.out.println("You made me minion");
+					changeBackgroundColor();
 				}
 			});
 		
 		
 	}
+	
+	private void changeBackgroundColor()
+	{
+		int red = (int) (Math.random() * 256);
+		int green = (int) (Math.random() * 256);
+		int blue = (int) (Math.random() * 256);
+		
+		this.setBackground(new Color(red, green, blue));
+		textLabel.setText("Red: " + red + " Green: " + green + " Blue: " + blue);
+		
+	}
+	
 }

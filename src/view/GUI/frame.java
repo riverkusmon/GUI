@@ -12,7 +12,7 @@ public class frame extends JFrame
 		super();
 		this.appController = appController;
 		this.appPanel = new panel(appController);
-		
+		setupFrame();
 	}
 	
 	private void setupFrame()

@@ -14,5 +14,15 @@ public class frame extends JFrame
 		this.appPanel = new panel(appController);
 		
 	}
+	
+	private void setupFrame()
+	{
+		this.setContentPane(appPanel);
+		this.setSize(800, 800);
+		this.setTitle("banana");
+		this.setResizable(true);
+		this.setVisible(true);
+		
+	}
 
 }
